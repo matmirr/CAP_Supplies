@@ -14,12 +14,16 @@
     "sqlite3": "^5.0.4"
   },
   "scripts": {
-    "start": "cds run"
+    "start": "cds run",
+    "build": "cds build/all --clean;cp gen/srv/srv/csn.json srv/gen/;cp -r gen/db/src/gen db/src"
   },
   "cds": {
+    "hana": {
+      "deploy-format": "hdbtable"
+    },
     "requires": {
       "db": {
-        "kind": "sql"
+        "kind": "hana-cloud"
       }
     }
   }
