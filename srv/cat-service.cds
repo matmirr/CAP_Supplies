@@ -6,3 +6,4 @@ service CatalogService {
 
     entity Suppliers as projection on officesupplies.Suppliers;
 };
+
