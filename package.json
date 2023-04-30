@@ -11,11 +11,14 @@
     "hdb": "^0.19.0"
   },
   "devDependencies": {
+    "@sap/ux-specification": "^1.108.3",
     "sqlite3": "^5.0.4"
   },
   "scripts": {
     "start": "cds run",
-    "build": "cds build/all --clean;cp gen/srv/srv/csn.json srv/gen/;cp -r gen/db/src/gen db/src"
+    "build": "cds build/all --clean;cp gen/srv/srv/csn.json srv/gen/;cp -r gen/db/src/gen db/src",
+    "watch-project1": "cds watch --open project1/webapp/index.html?sap-ui-xx-viewCache=false",
+    "watch-osfiori": "cds watch --open osfiori/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "cds": {
     "hana": {
@@ -26,5 +29,10 @@
         "kind": "hana-cloud"
       }
     }
-  }
+  },
+  "sapux": [
+    "app/project1",
+    "app/project1",
+    "app/osfiori"
+  ]
 }
